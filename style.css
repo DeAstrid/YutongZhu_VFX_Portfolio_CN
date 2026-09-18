@@ -1,11 +1,11 @@
-/* Original Neutral Tone - Slightly Lighter Grey */
+/* --- Color Palette & Root Variables --- */
 :root {
-    --bg-color: #22252a;       /* Lighter neutral grey background (no blue tint) */
-    --card-bg: #2d3137;        /* Slightly lighter card background for depth */
-    --accent-color: #00adb5;   /* Original teal accent */
+    --bg-color: #22252a;        /* Neutral grey background */
+    --card-bg: #2d3137;        /* Card background */
+    --accent-color: #00adb5;   /* Teal accent */
     --text-primary: #f0f0f0;   /* Clean white text */
-    --text-secondary: #b0b4bc; /* High-contrast light grey for descriptions */
-    --border-color: #3a3f47;   /* Subtle neutral grey borders */
+    --text-secondary: #b0b4bc; /* High-contrast light grey */
+    --border-color: #3a3f47;   /* Subtle borders */
 }
 
 * {
@@ -14,21 +14,21 @@
     padding: 0;
 }
 
+/* --- Base Chinese Typography --- */
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    line-height: 1.7; /* Increased for CJK legibility */
+    -webkit-font-smoothing: antialiased;
 }
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-}
+
 a {
     color: var(--accent-color);
     text-decoration: none;
 }
 
-/* Navbar */
+/* --- Navigation Bar --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -44,7 +44,13 @@ a {
 
 .nav-brand {
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+}
+
+.nav-brand span {
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    font-weight: 400;
 }
 
 .nav-links {
@@ -55,88 +61,108 @@ a {
 
 .nav-links a {
     color: var(--text-primary);
-    transition: color 0.2s;
+    transition: color 0.2s ease;
+    font-size: 0.95rem;
 }
 
 .nav-links a:hover {
     color: var(--accent-color);
 }
 
-/* Section Wrapper */
+/* --- Section Formatting --- */
 .section {
     max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 1.5rem;
 }
 
-.section h2 {
-    font-size: 2rem;
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
 }
 
-/* Hero Section */
-/* --- UPDATED HERO/HEADER CSS --- */
+.section-title span {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
 
+/* --- Hero Section & Header --- */
 .hero {
-    position: relative; /* Essential for layering the overlay */
+    position: relative;
     text-align: center;
-    padding: 10rem 1.5rem 8rem; /* Increased padding to give the image more space */
-    max-width: 100%; /* Hero now takes full width */
+    padding: 10rem 1.5rem 8rem;
+    max-width: 100%;
     margin: 0;
-
-    /* 1. The Background Image */
-    /* *** UPDATE THIS PATH to your actual image file *** */
     background-image: url('bg_v002.jpg'); 
-    background-size: cover; /* Keeps image covering the area, zooming if needed */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Optional: adds a parallax scrolling effect */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    
-    color: #ffffff; /* FORCE TEXT TO WHITE for max contrast */
+    color: #ffffff;
 }
 
-/* 2. The Semi-Transparent Overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Black with 60% opacity. If text is still hard to read, change 0.6 to 0.7 or higher. */
-    background-color: rgba(0, 0, 0, 0.6); 
-    z-index: 1; /* Puts overlay on top of the image */
+    background-color: rgba(0, 0, 0, 0.65); 
+    z-index: 1;
 }
 
-/* 3. The Content (Text and Buttons) */
 .hero-content {
-    position: relative; /* Keeps content on top */
-    z-index: 2; /* Puts text on top of the overlay */
-    max-width: 800px; /* Constrains text width for readability */
-    margin: 0 auto; /* Centers the text block */
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* --- Ensure Text Specifics --- */
+/* Primary Focus: Portfolio Title */
 .hero h1 {
-    font-size: 3.5rem;
-    letter-spacing: 3px;
-    margin-bottom: 0.5rem;
-    color: #ffffff; /* Explicitly set white */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Optional: extra subtle text shadow for lift */
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
+.hero h1 span {
+    font-size: 0.65em;
+    font-weight: 300;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+}
+
+/* Secondary Focus: Name & Subtitle */
 .hero h2 {
-    color: var(--accent-color); /* The accent color looks good on the dark overlay */
-    font-size: 1.6rem;
+    color: var(--accent-color);
+    font-size: 1.4rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.hero h2 span {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-left: 0.25rem;
 }
 
 .hero p {
-    color: rgba(255, 255, 255, 0.9); /* Slightly dimmer white for description text */
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    margin-bottom: 2.25rem;
+    line-height: 1.6;
 }
 
 .hero-links {
@@ -145,7 +171,7 @@ a {
     gap: 1rem;
 }
 
-/* Buttons */
+/* --- Buttons --- */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -153,7 +179,7 @@ a {
     color: #fff;
     border-radius: 4px;
     font-weight: 600;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s ease;
 }
 
 .btn:hover {
@@ -166,7 +192,7 @@ a {
     color: var(--accent-color);
 }
 
-/* Responsive Video Embeds */
+/* --- Video Containers --- */
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
@@ -184,7 +210,60 @@ a {
     height: 100%;
 }
 
-/* Project Breakdowns */
+/* --- Showreel & Tabs --- */
+.reel-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem 0;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background-color: var(--card-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.reel-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: #000;
+}
+
+.reel-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* --- Project Breakdowns Grid --- */
 .project-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -203,17 +282,28 @@ a {
 }
 
 .project-info h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.25rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
 }
 
 .tech-stack {
     color: var(--accent-color);
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     margin-bottom: 0.75rem;
 }
 
-/* Tools Section */
+.job-role {
+    font-size: 0.92rem;
+    margin-bottom: 0.4rem;
+}
+
+.project-info ul {
+    margin-left: 1.2rem;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+/* --- Tools & Pipeline Section --- */
 .tools-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -229,15 +319,20 @@ a {
 
 .tool-card h3 {
     margin-bottom: 0.5rem;
+    font-size: 1.15rem;
 }
 
 .tool-card p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     margin-bottom: 1rem;
 }
 
-/* CV Formatting */
+.text-link {
+    font-size: 0.9rem;
+}
+
+/* --- CV Formatting --- */
 .cv-header {
     display: flex;
     justify-content: space-between;
@@ -260,7 +355,7 @@ a {
 
 .cv-block h3 {
     color: var(--accent-color);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-bottom: 1rem;
 }
 
@@ -269,7 +364,8 @@ a {
 }
 
 .skills-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.92rem;
 }
 
 .cv-item {
@@ -281,22 +377,144 @@ a {
 }
 
 .cv-item h4 {
-    font-size: 1.05rem;
-}
-
-.cv-date {
-    display: block;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
 .cv-item ul {
     margin-left: 1.2rem;
     color: var(--text-secondary);
+    font-size: 0.92rem;
 }
 
-/* Footer */
+/* --- References --- */
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.reference-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    border-radius: 4px;
+}
+
+.reference-card h4 {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.ref-title {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.ref-contact {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.ref-note {
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* --- Pinterest-Style Masonry Gallery --- */
+.compact-grid {
+    column-count: 2;
+    column-gap: 0.75rem;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+@media screen and (min-width: 601px) {
+    .compact-grid {
+        column-count: 3;
+        column-gap: 1rem;
+    }
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    overflow: hidden;
+    break-inside: avoid;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+    opacity: 0.9;
+}
+
+/* --- Enhanced Lightbox --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 12, 0.93);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 40px 20px;
+}
+
+.lightbox img {
+    max-width: 90vw !important;
+    max-height: 80vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+    display: block;
+    margin: auto;
+}
+
+.lightbox-close {
+    position: absolute !important;
+    top: 25px !important;
+    right: 35px !important;
+    font-size: 4rem !important;
+    font-weight: 300 !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    z-index: 1010 !important;
+    line-height: 0.8 !important;
+    transition: transform 0.2s ease, color 0.2s ease;
+    user-select: none;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-close:hover {
+    color: var(--accent-color) !important;
+    transform: scale(1.15);
+}
+
+/* --- Footer --- */
 .footer {
     text-align: center;
     padding: 4rem 1.5rem 2rem;
@@ -316,7 +534,7 @@ a {
     font-size: 0.85rem;
 }
 
-/* Mobile Responsiveness */
+/* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -325,6 +543,9 @@ a {
     .hero h1 {
         font-size: 2.2rem;
     }
+    .hero h2 {
+        font-size: 1.2rem;
+    }
     .cv-header {
         flex-direction: column;
         align-items: flex-start;
@@ -332,209 +553,10 @@ a {
     }
 }
 
-
-/* --- REFERENCES SECTION --- */
-.references-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1rem;
-}
-
-.reference-card {
-    background-color: var(--bg-color); /* Matches background tone for inset look */
-    border: 1px solid var(--border-color);
-    padding: 1.25rem;
-    border-radius: 4px;
-}
-
-.reference-card h4 {
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    margin-bottom: 0.2rem;
-}
-
-.ref-title {
-    color: var(--accent-color);
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-.ref-company {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-}
-
-.ref-contact {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    line-height: 1.5;
-}
-
-.ref-note {
-    margin-top: 1.25rem;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-}
-
-/* --- PINTEREST-STYLE MASONRY GALLERY --- */
-
-.compact-grid {
-    /* Set column counts instead of a CSS Grid */
-    column-count: 2; /* 2 columns on mobile */
-    column-gap: 0.75rem;
-    max-width: 680px; /* Limits overall width on PC */
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-/* 3 columns on Desktop/Laptop */
-@media screen and (min-width: 601px) {
-    .compact-grid {
-        column-count: 3;
-        column-gap: 1rem;
-    }
-}
-
-.gallery-item {
-    display: inline-block; /* Essential for CSS column flow */
-    width: 100%;
-    margin-bottom: 0.75rem; /* Vertical space between stacked images */
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-    background-color: var(--card-bg);
-    overflow: hidden;
-    break-inside: avoid; /* Prevents an image from splitting across columns */
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto; /* Preserves the original aspect ratio */
-    display: block;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.04);
-    opacity: 0.9;
-}
-/* --- ENHANCED LIGHTBOX --- */
-
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(10, 10, 12, 0.93); /* Darker backdrop */
-    backdrop-filter: blur(8px); /* Soft focus on background content */
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-sizing: border-box;
-    padding: 40px 20px; /* Safe distance margins for top and bottom */
-}
-
-/* Fix vertical images cutting off */
-.lightbox img {
-    max-width: 90vw !important; /* Never goes wider than screen */
-    max-height: 80vh !important; /* Cap vertical image to prevent overflow cut-off */
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain !important; /* Keeps original proportions intact */
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9); /* Shadows to anchor the piece */
-    display: block;
-    margin: auto;
-}
-
-/* Giant "X" exit button - fixed on top-right */
-.lightbox-close {
-    position: absolute !important;
-    top: 25px !important;
-    right: 35px !important;
-    font-size: 4rem !important; /* Very large and easy to hit */
-    font-weight: 300 !important; /* Thin & modern */
-    color: #ffffff !important;
-    cursor: pointer !important;
-    z-index: 1010 !important; /* Explicitly overlay everything */
-    line-height: 0.8 !important; /* Center the crosshair vertical alignment */
-    transition: transform 0.2s ease, color 0.2s ease;
-    user-select: none;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9); /* Easy read against bright art */
-}
-
-/* Pop when hover */
-.lightbox-close:hover {
-    color: var(--accent-color, #00adb5) !important;
-    transform: scale(1.15);
-}
-
-/* Adjust button positioning on small mobile displays */
 @media screen and (max-width: 600px) {
     .lightbox-close {
         top: 15px !important;
         right: 20px !important;
         font-size: 3.2rem !important;
     }
-}
-
-/* --- FIX SHOWREEL & TABS STYLING --- */
-
-/* Tab Container */
-.reel-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    margin: 1.5rem 0 2rem 0;
-    flex-wrap: wrap;
-}
-
-/* Tab Buttons */
-.tab-btn {
-    background-color: var(--card-bg, #2d3137);
-    color: var(--text-secondary, #b0b4bc);
-    border: 1px solid var(--border-color, #3a3f47);
-    padding: 0.6rem 1.25rem;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    outline: none;
-}
-
-.tab-btn:hover {
-    color: var(--text-primary, #ffffff);
-    border-color: var(--accent-color, #00adb5);
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.tab-btn.active {
-    background-color: var(--accent-color, #00adb5);
-    color: #ffffff;
-    border-color: var(--accent-color, #00adb5);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Video Container Sizing Fix */
-.reel-container {
-    width: 100%;
-    max-width: 900px; /* Expands video back to full size */
-    margin: 0 auto 3rem auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border-color, #3a3f47);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    background-color: #000;
-}
-
-.reel-container iframe {
-    width: 100% !important;
-    height: 100% !important;
-    display: block;
 }
