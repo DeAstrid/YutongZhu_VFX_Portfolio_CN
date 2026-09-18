@@ -1,0 +1,538 @@
+/* Original Neutral Tone - Slightly Lighter Grey */
+:root {
+    --bg-color: #22252a;       /* Lighter neutral grey background (no blue tint) */
+    --card-bg: #2d3137;        /* Slightly lighter card background for depth */
+    --accent-color: #00adb5;   /* Original teal accent */
+    --text-primary: #f0f0f0;   /* Clean white text */
+    --text-secondary: #b0b4bc; /* High-contrast light grey for descriptions */
+    --border-color: #3a3f47;   /* Subtle neutral grey borders */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(15, 17, 21, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+.nav-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Section Wrapper */
+.section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Hero Section */
+/* --- UPDATED HERO/HEADER CSS --- */
+
+.hero {
+    position: relative; /* Essential for layering the overlay */
+    text-align: center;
+    padding: 10rem 1.5rem 8rem; /* Increased padding to give the image more space */
+    max-width: 100%; /* Hero now takes full width */
+    margin: 0;
+
+    /* 1. The Background Image */
+    /* *** UPDATE THIS PATH to your actual image file *** */
+    background-image: url('bg_v002.jpg'); 
+    background-size: cover; /* Keeps image covering the area, zooming if needed */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Optional: adds a parallax scrolling effect */
+    background-repeat: no-repeat;
+    
+    color: #ffffff; /* FORCE TEXT TO WHITE for max contrast */
+}
+
+/* 2. The Semi-Transparent Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Black with 60% opacity. If text is still hard to read, change 0.6 to 0.7 or higher. */
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1; /* Puts overlay on top of the image */
+}
+
+/* 3. The Content (Text and Buttons) */
+.hero-content {
+    position: relative; /* Keeps content on top */
+    z-index: 2; /* Puts text on top of the overlay */
+    max-width: 800px; /* Constrains text width for readability */
+    margin: 0 auto; /* Centers the text block */
+}
+
+/* --- Ensure Text Specifics --- */
+.hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* Explicitly set white */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Optional: extra subtle text shadow for lift */
+}
+
+.hero h2 {
+    color: var(--accent-color); /* The accent color looks good on the dark overlay */
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    color: rgba(255, 255, 255, 0.9); /* Slightly dimmer white for description text */
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Responsive Video Embeds */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 6px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Project Breakdowns */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.tech-stack {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Tools Section */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tool-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.tool-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.tool-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* CV Formatting */
+.cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cv-header h2 {
+    margin-bottom: 0;
+    border: none;
+}
+
+.cv-block {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.cv-block h3 {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    margin-bottom: 0.5rem;
+}
+
+.cv-item {
+    margin-bottom: 1.5rem;
+}
+
+.cv-item:last-child {
+    margin-bottom: 0;
+}
+
+.cv-item h4 {
+    font-size: 1.05rem;
+}
+
+.cv-date {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.cv-item ul {
+    margin-left: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 4rem 1.5rem 2rem;
+    background-color: #090a0d;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .cv-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+
+/* --- REFERENCES SECTION --- */
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.reference-card {
+    background-color: var(--bg-color); /* Matches background tone for inset look */
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    border-radius: 4px;
+}
+
+.reference-card h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.ref-title {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.ref-company {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.ref-contact {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.ref-note {
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* --- PINTEREST-STYLE MASONRY GALLERY --- */
+
+.compact-grid {
+    /* Set column counts instead of a CSS Grid */
+    column-count: 2; /* 2 columns on mobile */
+    column-gap: 0.75rem;
+    max-width: 680px; /* Limits overall width on PC */
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* 3 columns on Desktop/Laptop */
+@media screen and (min-width: 601px) {
+    .compact-grid {
+        column-count: 3;
+        column-gap: 1rem;
+    }
+}
+
+.gallery-item {
+    display: inline-block; /* Essential for CSS column flow */
+    width: 100%;
+    margin-bottom: 0.75rem; /* Vertical space between stacked images */
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    overflow: hidden;
+    break-inside: avoid; /* Prevents an image from splitting across columns */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Preserves the original aspect ratio */
+    display: block;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+    opacity: 0.9;
+}
+/* --- ENHANCED LIGHTBOX --- */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 12, 0.93); /* Darker backdrop */
+    backdrop-filter: blur(8px); /* Soft focus on background content */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 40px 20px; /* Safe distance margins for top and bottom */
+}
+
+/* Fix vertical images cutting off */
+.lightbox img {
+    max-width: 90vw !important; /* Never goes wider than screen */
+    max-height: 80vh !important; /* Cap vertical image to prevent overflow cut-off */
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important; /* Keeps original proportions intact */
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9); /* Shadows to anchor the piece */
+    display: block;
+    margin: auto;
+}
+
+/* Giant "X" exit button - fixed on top-right */
+.lightbox-close {
+    position: absolute !important;
+    top: 25px !important;
+    right: 35px !important;
+    font-size: 4rem !important; /* Very large and easy to hit */
+    font-weight: 300 !important; /* Thin & modern */
+    color: #ffffff !important;
+    cursor: pointer !important;
+    z-index: 1010 !important; /* Explicitly overlay everything */
+    line-height: 0.8 !important; /* Center the crosshair vertical alignment */
+    transition: transform 0.2s ease, color 0.2s ease;
+    user-select: none;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9); /* Easy read against bright art */
+}
+
+/* Pop when hover */
+.lightbox-close:hover {
+    color: var(--accent-color, #00adb5) !important;
+    transform: scale(1.15);
+}
+
+/* Adjust button positioning on small mobile displays */
+@media screen and (max-width: 600px) {
+    .lightbox-close {
+        top: 15px !important;
+        right: 20px !important;
+        font-size: 3.2rem !important;
+    }
+}
+
+/* --- FIX SHOWREEL & TABS STYLING --- */
+
+/* Tab Container */
+.reel-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem 0;
+    flex-wrap: wrap;
+}
+
+/* Tab Buttons */
+.tab-btn {
+    background-color: var(--card-bg, #2d3137);
+    color: var(--text-secondary, #b0b4bc);
+    border: 1px solid var(--border-color, #3a3f47);
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary, #ffffff);
+    border-color: var(--accent-color, #00adb5);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    background-color: var(--accent-color, #00adb5);
+    color: #ffffff;
+    border-color: var(--accent-color, #00adb5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Video Container Sizing Fix */
+.reel-container {
+    width: 100%;
+    max-width: 900px; /* Expands video back to full size */
+    margin: 0 auto 3rem auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color, #3a3f47);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: #000;
+}
+
+.reel-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yutong Zhu | FX Artist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">Yutong Zhu</div>
+        <ul class="nav-links">
+            <li><a href="#reel">Showreel</a></li>
+            <li><a href="#projects">Breakdowns</a></li>
+            <li><a href="#cv">CV / Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div> <!-- This creates the semi-transparent mask -->
+        <div class="hero-content"> <!-- Keeps the text centered and organized -->
+            <h1>Yutong Zhu</h1>
+            <h2>FX Artist</h2>
+            <p>Specializing in procedural simulation, environment effects, technical art.</p>
+            <div class="hero-links">
+                <a href="mailto:yutongzhufx@gmail.com" class="btn">Contact Me</a>
+                <a href="YutongZhu-vfx-simulation-cv.pdf" download="YutongZhu_CV.pdf" class="btn btn-outline">Download CV (.PDF)</a>
+            </div>
+        </div>
+    </header>
+
+   <section id="showreel" class="section">
+    <h2 class="section-title">Showreels</h2>
+    
+    <!-- Reel Selector Tabs -->
+    <div class="reel-tabs">
+        <button class="tab-btn active" onclick="switchReel('fx', this)">FX & Generalist Reel (Primary)</button>
+        <button class="tab-btn" onclick="switchReel('general', this)">3D Modeling & Texturing</button>
+        <button class="tab-btn" onclick="switchReel('comp', this)">Compositing & Finishing</button>
+    </div>
+
+    <!-- Single Embed Frame -->
+    <div class="reel-container">
+        <iframe id="main-reel" 
+                src="https://www.youtube.com/embed/Gct33YVfauw" 
+                title="FX Showreel" 
+                frameborder="0" 
+                allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+    <section id="projects" class="section">
+        <h2>Project Breakdowns</h2>
+        <div class="project-grid">
+            
+            <article class="project-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/U-AoObay8bo" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>Brain Squid</h3>
+                    <p class="tech-stack"><strong>Tools:</strong> Houdini, Nuke, Karma, Maya, Substance Painter</p>
+                    <p>Responsible for:</p>
+                    <p>Camera matchmove</p>
+                    <p>Practical lighting and CG lighting</p>
+                    <p>Procedural animation</p>
+                    <p>Zbrush model</p>
+                    <p>Soft body simulation: FEM & Vellum</p>
+                    <p>Fluid simulation: FLIP</p>
+                    <P>Substance Painter texture</P>
+                    <p>Karma Solaris lookdev</p>
+                    <p>Karma lighting & rendering</p>
+                    <p>Nuke compositing</p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ZztCnPZZFx8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>Procedural Tentacle Tool For Artist</h3>
+                    <p class="tech-stack"><strong>Tools:</strong> Maya, Houdini</p>
+                    <p>Responsible for:</p>
+                    <p>Assets modeling & texturing</p>
+                    <p>Procedual tool creation: HDA</p>
+                </div>
+            </article>
+            
+            <article class="project-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/0XTOCtqP6Y4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>Meteor Impact & Destruction</h3>
+                    <p class="tech-stack"><strong>Tools:</strong> Maya, Houdini, Nuke, Substance Painter</p>
+                    <p>Responsible for:</p>
+                    <p>Assets modeling & texturing</p>
+                    <p>Explosion simulation: PYRO</p>
+                    <p>Debris simulation: POP</p>
+                    <p>Nuke compositing</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="tools" class="section">
+        <h2>Pipeline & Technical Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Custom HDA Suite</h3>
+                <p>A collection of SideFX Houdini digital assets for tentacles generation and animation.</p>
+                <a href="https://github.com/DeAstrid/YutongZhu_VFX_Portfolio" target="_blank" class="text-link">View on GitHub &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compact Artwork Gallery Section -->
+<section id="art-gallery" class="section">
+    <h2 class="section-title">Sketches & Digital Art</h2>
+
+    <div class="compact-grid">
+        <!-- Add as many images as you like -->
+        <a href="images/paint_01.jpg" class="gallery-item"><img src="images/paint_01.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/paint_02.jpg" class="gallery-item"><img src="images/paint_02.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/paint_03.jpg" class="gallery-item"><img src="images/paint_03.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/paint_04.jpg" class="gallery-item"><img src="images/paint_04.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/paint_05.jpg" class="gallery-item"><img src="images/paint_05.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/paint_06.jpg" class="gallery-item"><img src="images/paint_06.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/paint_07.jpg" class="gallery-item"><img src="images/paint_07.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/paint_08.jpg" class="gallery-item"><img src="images/paint_08.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/sketch_01.jpg" class="gallery-item"><img src="images/sketch_01.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/sketch_02.jpg" class="gallery-item"><img src="images/sketch_02.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/sketch_03.jpg" class="gallery-item"><img src="images/sketch_03.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/sketch_04.jpg" class="gallery-item"><img src="images/sketch_04.jpg" alt="Artwork" loading="lazy"></a>
+        <a href="images/sketch_05.jpg" class="gallery-item"><img src="images/sketch_05.jpg" alt="Artwork" loading="lazy"></a>
+    </div>
+</section>
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" alt="Enlarged Artwork">
+</div>
+    
+    <section id="cv" class="section">
+        <div class="cv-header">
+            <h2>Curriculum Vitae</h2>
+               <a href="YutongZhu-vfx-simulation-cv.pdf" download="YutongZhu_CV.pdf" class="btn btn-outline">Download PDF</a>
+        </div>
+
+        <div class="cv-content">
+            <div class="cv-block">
+                <h3>Summary</h3>
+                <p>Recently graduated VFX artist with a strong technical background in Physics and Computer Science. My primary focus is <strong>procedural simulation and tool creation in Houdini</strong>. I complement this with secondary expertise in <strong>Nuke compositing</strong> and broad training across the wider VFX pipeline, including <strong>creature modeling, texturing and rigging</strong>. I aim to bridge the gap between creative vision and complex technical systems and build grounded, tangible visuals and efficient, reliable workflows for production.</p>
+            </div>
+
+            <div class="cv-block">
+                <h3>Technical Skills</h3>
+                <ul class="skills-list">
+                    <li><strong>FX Simulation & Technical Direction</strong></li> 
+                        <p>Houdini, Pyro, Vellum, Flip, RBD, HDA Creation, KineFX & Apex Rigging, Procedural Animation, Solaris & Karma</li></p>
+                    <li><strong> Compositing & Integration</strong></li>
+                        <p>Nuke, CG Integration & Multi-Pass Compositing, Technical Grading & Color Science, Rotoscoping</li></p>
+                    <li><strong>3D Modeling & LookDev</strong></li>
+                        <p>Maya, Zbrush, Substance Painter, V-Ray, Arnold,Modeling & Rigging</li></p>
+                    <li><strong>Coding</strong></li>
+                        <p>VEX, C, Python, HTML/CSS</li></p>
+                </ul>
+            </div>
+
+            <div class="cv-block">
+                <h3>Key Projects</h3>
+                
+                <div class="cv-item">
+                    <h4>VFX Artist — <em>Procedural Tentacle System for Artists</em></h4>
+                    <ul>
+                        <li>Developed a highly customizable Houdini Digital Asset for procedural growth and animation of organic tentacles suitable for complex terrain.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-item">
+                    <h4>FX Artist — <em>Meteor Impact & Destruction</em></h4>
+                    <ul>
+                        <li>An art-directed, physically accurate 3-meter radius meteor impact, utilizing Pyro and POP simulations to achieve specific narrative timing and environmental interaction.</li>
+                    </ul>
+                </div>   
+                <div class="cv-item">
+                    <h4>Generalist — <em>‘Brain-Squid’ Creature Integration</em></h4>
+                    <ul>
+                        <li>A full-pipeline project integrating a multi-solver creature simulation (Vellum, FEM, FLIP) into a self-shot live-action plate, covering the process from matchmoving to final compositing.</li>
+                    </ul>
+                 </div>
+            </div>
+            
+       
+        
+            <div class="cv-block">
+                <h3>Education</h3>
+                <div class="cv-item">
+                    <h4>Bachelor of Arts in Visual Effects</h4>
+                    <span class="cv-date">Bournmouth University 2023-2026</span>
+                </div>
+                 <div class="cv-item">
+                    <h4>Bachelor of Science(Course Complete) in Computer Science</h4>
+                    <span class="cv-date">University of Chinese Academy of Science 2020-2023</span>
+                </div>
+            </div>
+
+                        <!-- Professional References -->
+            <div class="cv-block">
+                <h3>Professional References</h3>
+                <div class="references-grid">
+                    
+                    <!-- Reference 1 -->
+                    <div class="reference-card">
+                        <h4>Jeremy Hardin</h4>
+                        <p class="ref-title">VFX Supervisor</p>
+                        <p class="ref-contact">
+                            <strong>Email:</strong> <a href="mailto:reference.email@example.com">jeremy@dccvfx.com</a><br>
+                            <strong>Relationship:</strong> Direct Supervisor / Academic Mentor
+                        </p>
+                    </div>
+
+                </div>
+                
+                <!-- Privacy Note (Optional) -->
+                <p class="ref-note"><em>* Further contact details are available upon request.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <h2>Get In Touch</h2>
+        <p>Available for freelance and studio opportunities.</p>
+        <div class="footer-links">
+            <a href="mailto:yutongzhufx@gmail.com">yutongzhufx@gmail.com</a>
+            <a href="https://www.linkedin.com/in/yutong-zhu-479a192b2/?skipRedirect=true" target="_blank">LinkedIn</a>
+            <a href="https://github.com/DeAstrid" target="_blank">GitHub</a>
+        </div>
+        <p class="copyright">&copy; 2026 Yutong Zhu. All rights reserved.</p>
+    </footer>
+
+    <script>
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = this.getAttribute('href');
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+
+    <script>
+    // Object mapping tabs to YouTube Embed URLs
+    const reels = {
+        'fx': 'https://www.youtube.com/embed/Gct33YVfauw',
+        'general': 'https://www.youtube.com/embed/-ths0ZoY_2M',
+        'comp': 'https://www.youtube.com/embed/VBqzwo5xH4k'
+    };
+
+    function switchReel(type, buttonElement) {
+        // Update Iframe Source
+        const iframe = document.getElementById('main-reel');
+        if (reels[type]) {
+            iframe.src = reels[type];
+        }
+
+        // Update Active Button Style
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        buttonElement.classList.add('active');
+    }
+</script>
+</body>
+</html>
