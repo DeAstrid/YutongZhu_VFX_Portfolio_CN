@@ -3,58 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>朱羽童 | 特效艺术家 (FX Artist)</title>
+    <title>朱羽童 | 特效指导 & 技术美术 (FX Artist / TD Portfolio)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <nav class="navbar">
-        <div class="nav-brand">朱羽童)</div>
+        <div class="nav-brand">朱羽童 <span>/ Yutong Zhu</span></div>
         <ul class="nav-links">
-            <li><a href="#reel">作品集 (Showreel)</a></li>
-            <li><a href="#projects">项目解析 (Breakdowns)</a></li>
-            <li><a href="#cv">个人简历 (CV)</a></li>
-            <li><a href="#contact">联系方式</a></li>
+            <li><a href="#reel">作品集 Reel</a></li>
+            <li><a href="#projects">项目解析 Breakdowns</a></li>
+            <li><a href="#art-gallery">美术作品 Art</a></li>
+            <li><a href="#cv">简历 CV</a></li>
+            <li><a href="#contact">联系方式 Contact</a></li>
         </ul>
     </nav>
 
     <header class="hero">
-        <div class="hero-overlay"></div> <!-- This creates the semi-transparent mask -->
-        <div class="hero-content"> <!-- Keeps the text centered and organized -->
-            <h1>朱羽童</h1>
-            <h2>特效艺术家 (FX Artist)</h2>
-            <p> Houdini程序化化解算模拟、环境特效与技术美术 。</p>
-            <div class="hero-links">
-                <a href="mailto:yutongzhufx@gmail.com" class="btn">联系我</a>
-                <a href="YutongZhu-vfx-simulation-cv.pdf" download="YutongZhu_CV.pdf" class="btn btn-outline">下载简历 (.PDF)</a>
-            </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>VFX 特效作品集 <span>/ PORTFOLIO</span></h1>
+        <h2>朱羽童 <span>Yutong Zhu</span></h2>
+        <p>特效艺术家 / 技术美术 (FX Artist & TD) — 主攻 Houdini 程序化模拟、物理解算与 Pipeline 工具开发</p>
+        <div class="hero-links">
+            <a href="mailto:yutongzhufx@gmail.com" class="btn">联系我 Email Me</a>
+            <a href="YutongZhu-vfx-simulation-cv.pdf" download="YutongZhu_CV.pdf" class="btn btn-outline">下载简历 (.PDF)</a>
         </div>
+    </div>
     </header>
 
-   <section id="showreel" class="section">
-    <h2 class="section-title">个人作品集 (Showreels)</h2>
-    
-    <!-- Reel Selector Tabs -->
-    <div class="reel-tabs">
-        <button class="tab-btn active" onclick="switchReel('fx', this)">特效与通用作品集 </button>
-        <button class="tab-btn" onclick="switchReel('general', this)">3D 建模与材质贴图</button>
-        <button class="tab-btn" onclick="switchReel('comp', this)">合成与后期制作</button>
-    </div>
+    <!-- SHOWREELS SECTION -->
+    <section id="reel" class="section">
+        <h2 class="section-title">个人作品集 <span>/ SHOWREELS</span></h2>
+        
+        <!-- Reel Selector Tabs -->
+        <div class="reel-tabs">
+            <button class="tab-btn active" onclick="switchReel('fx', this)">FX 特效 & 通用 Demo Reel</button>
+            <button class="tab-btn" onclick="switchReel('general', this)">3D 建模 & 资产 LookDev</button>
+            <button class="tab-btn" onclick="switchReel('comp', this)">Nuke 最终合成 & 画面整合</button>
+        </div>
 
-    <!-- Single Embed Frame -->
-    <div class="reel-container">
-        <iframe id="main-reel" 
-                src="https://www.youtube.com/embed/Gct33YVfauw" 
-                title="FX Showreel" 
-                frameborder="0" 
-                allowfullscreen>
-        </iframe>
-    </div>
-</section>
+        <!-- Single Embed Frame (Replace YouTube src with Bilibili iframe for China deployment) -->
+        <div class="reel-container">
+            <iframe id="main-reel" 
+                    src="https://www.youtube.com/embed/Gct33YVfauw" 
+                    title="FX Showreel" 
+                    frameborder="0" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </section>
 
+    <!-- PROJECT BREAKDOWNS SECTION -->
     <section id="projects" class="section">
-        <h2>项目过程解析 (Project Breakdowns)</h2>
+        <h2 class="section-title">项目过程解析 <span>/ PROJECT BREAKDOWNS</span></h2>
+        
         <div class="project-grid">
             
             <article class="project-card">
@@ -62,19 +66,16 @@
                     <iframe src="https://www.youtube.com/embed/U-AoObay8bo" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="project-info">
-                    <h3>脑乌贼生物合成</h3>
-                    <p class="tech-stack"><strong>使用工具：</strong> Houdini, Nuke, Karma, Maya, Substance Painter</p>
-                    <p>负责内容：</p>
-                    <p>摄像机反求匹配 (Matchmove)</p>
-                    <p>实拍灯光匹配与 CG 灯光搭建</p>
-                    <p>程序化动画解算</p>
-                    <p>Zbrush 生物雕刻</p>
-                    <p>柔体物理模拟：FEM & Vellum</p>
-                    <p>流体模拟：FLIP</p>
-                    <p>Substance Painter 材质贴图</p>
-                    <p>Karma Solaris 材质外观开发 (LookDev)</p>
-                    <p>Karma 灯光渲染</p>
-                    <p>Nuke 最终合成</p>
+                    <h3>‘Brain-Squid’ 脑乌贼生物实拍合成</h3>
+                    <p class="tech-stack"><strong>使用工具：</strong> Houdini, Nuke, Karma, Maya, Substance 3D Painter, ZBrush</p>
+                    <p class="job-role"><strong>负责内容：</strong></p>
+                    <ul>
+                        <li>摄像机 Matchmove 反求与实拍灯光匹配 (HDRI Light Rig)</li>
+                        <li>ZBrush 生物雕刻与 Substance Painter 材质绘制</li>
+                        <li>Houdini Vellum & FEM 柔体物理模拟与 FLIP 流体交互解算</li>
+                        <li>Karma / Solaris 材质外观开发 (LookDev) 与分层渲染</li>
+                        <li>Nuke 多通道 CG 元素深度合成</li>
+                    </ul>
                 </div>
             </article>
 
@@ -83,202 +84,198 @@
                     <iframe src="https://www.youtube.com/embed/ZztCnPZZFx8" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="project-info">
-                    <h3>程序化触手生成工具</h3>
-                    <p class="tech-stack"><strong>使用工具：</strong> Maya, Houdini</p>
-                    <p>负责内容：</p>
-                    <p>资产建模与贴图绘制</p>
-                    <p>程序化工具开发：HDA</p>
+                    <h3>程序化触手生成数字资产 (HDA)</h3>
+                    <p class="tech-stack"><strong>使用工具：</strong> Houdini, Maya</p>
+                    <p class="job-role"><strong>负责内容：</strong></p>
+                    <ul>
+                        <li>有机生物资产建模与 UV / 贴图绘制</li>
+                        <li>基于 Houdini 开发面向艺术家的自定义 HDA 工具</li>
+                        <li>实现复杂地形自动碰撞与程序化生长动画控制</li>
+                    </ul>
                 </div>
             </article>
-            
+
             <article class="project-card">
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/0XTOCtqP6Y4" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="project-info">
-                    <h3>陨石撞击与破坏解算 </h3>
-                    <p class="tech-stack"><strong>使用工具：</strong> Maya, Houdini, Nuke, Substance Painter</p>
-                    <p>负责内容：</p>
-                    <p>资产建模与贴图</p>
-                    <p>爆炸烟火模拟：PYRO</p>
-                    <p>碎屑粒子模拟：POP</p>
-                    <p>Nuke 最终合成</p>
+                    <h3>陨石撞击与刚体破碎解算</h3>
+                    <p class="tech-stack"><strong>使用工具：</strong> Houdini, Maya, Nuke, Substance Painter</p>
+                    <p class="job-role"><strong>负责内容：</strong></p>
+                    <ul>
+                        <li>陨石与环境基础模型搭建及贴图制作</li>
+                        <li>Houdini Pyro 爆炸烟火模拟与 POP 碎屑粒子模拟</li>
+                        <li>RBD 刚体破碎与地表交互撞击解算</li>
+                        <li>Nuke 烟雾、火光与背景板合成</li>
+                    </ul>
                 </div>
             </article>
+
         </div>
     </section>
 
+    <!-- PIPELINE & TOOLS SECTION -->
     <section id="tools" class="section">
-        <h2>管线与技术工具 (Pipeline & Technical Tools)</h2>
+        <h2 class="section-title">管线与技术工具 <span>/ PIPELINE & TD TOOLS</span></h2>
         <div class="tools-grid">
             <div class="tool-card">
-                <h3>自定义 HDA 资产套件</h3>
-                <p>一套基于 SideFX Houdini 开发的数字资产工具，用于有机触手的程序化生成与动画解算。</p>
-                <a href="https://github.com/DeAstrid/YutongZhu_VFX_Portfolio" target="_blank" class="text-link">在 GitHub 查看 &rarr;</a>
+                <h3>程序化有机触手 HDA 工具包</h3>
+                <p>基于 SideFX Houdini 开发的数字资产套件，支持在复杂 3D 地形上快速生成生物触手形态、自适应路径延伸及动力学解算。</p>
+                <a href="https://github.com/DeAstrid/YutongZhu_VFX_Portfolio" target="_blank" class="text-link">查看源码 / GitHub Repository &rarr;</a>
             </div>
         </div>
     </section>
 
-    <!-- Compact Artwork Gallery Section -->
-<section id="art-gallery" class="section">
-    <h2 class="section-title">速写与板绘作品</h2>
+    <!-- COMPACT ARTWORK GALLERY SECTION -->
+    <section id="art-gallery" class="section">
+        <h2 class="section-title">美术基础与手绘作品 <span>/ ARTWORK & SKETCHES</span></h2>
 
-    <div class="compact-grid">
-        <!-- Add as many images as you like -->
-        <a href="images/paint_01.jpg" class="gallery-item"><img src="images/paint_01.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/paint_02.jpg" class="gallery-item"><img src="images/paint_02.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/paint_03.jpg" class="gallery-item"><img src="images/paint_03.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/paint_04.jpg" class="gallery-item"><img src="images/paint_04.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/paint_05.jpg" class="gallery-item"><img src="images/paint_05.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/paint_06.jpg" class="gallery-item"><img src="images/paint_06.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/paint_07.jpg" class="gallery-item"><img src="images/paint_07.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/paint_08.jpg" class="gallery-item"><img src="images/paint_08.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/sketch_01.jpg" class="gallery-item"><img src="images/sketch_01.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/sketch_02.jpg" class="gallery-item"><img src="images/sketch_02.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/sketch_03.jpg" class="gallery-item"><img src="images/sketch_03.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/sketch_04.jpg" class="gallery-item"><img src="images/sketch_04.jpg" alt="Artwork" loading="lazy"></a>
-        <a href="images/sketch_05.jpg" class="gallery-item"><img src="images/sketch_05.jpg" alt="Artwork" loading="lazy"></a>
+        <div class="compact-grid">
+            <a href="images/paint_01.jpg" class="gallery-item"><img src="images/paint_01.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/paint_02.jpg" class="gallery-item"><img src="images/paint_02.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/paint_03.jpg" class="gallery-item"><img src="images/paint_03.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/paint_04.jpg" class="gallery-item"><img src="images/paint_04.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/paint_05.jpg" class="gallery-item"><img src="images/paint_05.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/paint_06.jpg" class="gallery-item"><img src="images/paint_06.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/paint_07.jpg" class="gallery-item"><img src="images/paint_07.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/paint_08.jpg" class="gallery-item"><img src="images/paint_08.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/sketch_01.jpg" class="gallery-item"><img src="images/sketch_01.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/sketch_02.jpg" class="gallery-item"><img src="images/sketch_02.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/sketch_03.jpg" class="gallery-item"><img src="images/sketch_03.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/sketch_04.jpg" class="gallery-item"><img src="images/sketch_04.jpg" alt="Artwork" loading="lazy"></a>
+            <a href="images/sketch_05.jpg" class="gallery-item"><img src="images/sketch_05.jpg" alt="Artwork" loading="lazy"></a>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" alt="Enlarged Artwork">
     </div>
-</section>
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" alt="Enlarged Artwork">
-</div>
     
+    <!-- CV SECTION -->
     <section id="cv" class="section">
         <div class="cv-header">
-            <h2>个人简历 (Curriculum Vitae)</h2>
-               <a href="YutongZhu-vfx-simulation-cv.pdf" download="YutongZhu_CV.pdf" class="btn btn-outline">下载 PDF 简历</a>
+            <h2 class="section-title">个人简历 <span>/ CURRICULUM VITAE</span></h2>
+            <a href="YutongZhu-vfx-simulation-cv.pdf" download="YutongZhu_CV.pdf" class="btn btn-outline">下载简历 (.PDF)</a>
         </div>
 
         <div class="cv-content">
             <div class="cv-block">
-                <h3>个人简介</h3>
-                <p>特效 (VFX) 毕业生，具备扎实的物理与计算机科学技术背景。我的核心领域是 <strong>Houdini 中的程序化模拟与工具开发</strong>。同时，我兼具 <strong>Nuke 合成</strong> 专业能力，并在更广泛的 VFX 制作管线中有扎实的综合训练，包括 <strong>生物/角色建模、贴图绘制与绑定</strong>。我致力于桥接创意视觉与复杂的底层技术体系，为实际生产搭建符合物理规律、富有质感的画面与高效可靠的工作流程。</p>
+                <h3>个人简介 / Summary</h3>
+                <p>特效 (VFX) 毕业生，具备计算机科学与理学背景。核心优势为 <strong>Houdini 程序化解算、物理模拟与 HDA 工具开发</strong>。具备 <strong>Nuke 影视级合成能力</strong>，并在 VFX 全管线（生物/角色建模、贴图绘制 LookDev、绑定）中有扎实实操经验。致力于将计算机底层技术与视觉创意相结合，搭建高效可靠的制作流程。</p>
             </div>
 
             <div class="cv-block">
-                <h3>专业技能</h3>
+                <h3>专业技能 / Technical Skills</h3>
                 <ul class="skills-list">
-                    <li><strong>特效解算与技术美术 (FX Simulation & TD)</strong></li> 
-                        <p>Houdini, Pyro, Vellum, Flip, RBD, HDA 工具开发, KineFX & Apex 绑定, 程序化动画, Solaris & Karma</p>
-                    <li><strong>合成与画面整合 (Compositing & Integration)</strong></li>
-                        <p>Nuke, CG 元素合成与多通道合成, 技术调色与色彩科学, 抠像跟踪 (Rotoscoping)</p>
-                    <li><strong>3D 建模与外观开发 (3D Modeling & LookDev)</strong></li>
-                        <p>Maya, ZBrush, Substance Painter, V-Ray, Arnold, 建模与绑定</p>
-                    <li><strong>编程与脚本语言 (Coding)</strong></li>
-                        <p>VEX, C, Python, HTML/CSS</p>
+                    <li><strong>特效解算与技术美术 (FX Simulation & TD):</strong> Houdini, Pyro, Vellum, FLIP, RBD, HDA 工具开发, KineFX & APEX 绑定, Solaris & Karma</li>
+                    <li><strong>合成与画面整合 (Compositing & Integration):</strong> Nuke, CG 元素合成, 多通道分层合成, 色彩管理, Tracking & Rotoscoping</li>
+                    <li><strong>3D 建模与外观开发 (Modeling & LookDev):</strong> Maya, ZBrush, Substance 3D Painter, V-Ray, Arnold</li>
+                    <li><strong>编程与脚本 (Programming):</strong> VEX, Python, C, HTML/CSS</li>
                 </ul>
             </div>
 
             <div class="cv-block">
-                <h3>重点项目</h3>
+                <h3>重点项目经验 / Featured Projects</h3>
                 
                 <div class="cv-item">
-                    <h4>特效艺术家 — <em>面向艺术家的程序化触手系统</em></h4>
+                    <h4>特效艺术家 (FX Artist) — <em>程序化触手系统</em></h4>
                     <ul>
-                        <li>在 Houdini 中开发了具备高自定义程度的数字资产 (HDA)，用于在复杂地形上生成有机触手的程序化生长与动画。</li>
+                        <li>在 Houdini 中开发具备高自由度控制的数字资产 (HDA)，实现有机生物触手在地形上的程序化生长与自适应动力学解算。</li>
                     </ul>
                 </div>
 
                 <div class="cv-item">
-                    <h4>特效艺术家 — <em>陨石撞击与毁灭效果解算</em></h4>
+                    <h4>特效艺术家 (FX Artist) — <em>陨石撞击与毁灭效果解算</em></h4>
                     <ul>
-                        <li>以艺术合规与物理真实度为导向，使用 Pyro 和 POP 模拟解算了半径 3 米的陨石撞击效果，完美符合特定叙事节奏与环境交互需求。</li>
+                        <li>使用 Pyro、POP 及 RBD 解算器构建大尺度陨石撞击效果，精准把控烟尘、火焰与地表碎屑的物理交互与艺术节奏。</li>
                     </ul>
                 </div>   
+
                 <div class="cv-item">
-                    <h4>通用美术师 — <em>‘Brain-Squid’ 生物实拍合成</em></h4>
+                    <h4>通用美术师 (Generalist) — <em>‘Brain-Squid’ 生物实拍合成</em></h4>
                     <ul>
-                        <li>全管线制作项目：将多解算器生物模拟 (Vellum, FEM, FLIP) 完美融入自拍的实拍素材中，涵盖从摄像机匹配 (Matchmove) 到最终合成的全过程。</li>
+                        <li>负责全管线制作：将多解算器生物模拟 (Vellum, FEM, FLIP) 融入实拍素材，完成 Matchmove、Lighting、LookDev 及 Nuke 最终合成。</li>
                     </ul>
                 </div>
             </div>
-            
-        
-        
+
             <div class="cv-block">
-                <h3>教育背景</h3>
+                <h3>教育背景 / Education</h3>
                 <div class="cv-item">
-                    <h4>特效制作 艺术学士 (BA in Visual Effects)</h4>
-                    <span class="cv-date">英国伯恩茅斯大学 (Bournemouth University) 2023-2026</span>
+                    <h4>伯恩茅斯大学 (Bournemouth University)</h4>
+                    <p>特效制作 艺术学士 (BA in Visual Effects) | 2023 - 2026</p>
                 </div>
-                 <div class="cv-item">
-                    <h4>计算机科学与技术 理学学士 (完成修读)</h4>
-                    <span class="cv-date">中国科学院大学 (UCAS) 2020-2023</span>
+                <div class="cv-item">
+                    <h4>中国科学院大学 (UCAS)</h4>
+                    <p>计算机科学与技术 理学学士 (完成阶段修读) | 2020 - 2023</p>
                 </div>
             </div>
 
-                        <!-- Professional References -->
             <div class="cv-block">
-                <h3>推荐人信息 (Professional References)</h3>
+                <h3>推荐人信息 / References</h3>
                 <div class="references-grid">
-                    
-                    <!-- Reference 1 -->
                     <div class="reference-card">
                         <h4>Jeremy Hardin</h4>
                         <p class="ref-title">特效总监 (VFX Supervisor)</p>
                         <p class="ref-contact">
-                            <strong>电子邮箱：</strong> <a href="mailto:jeremy@dccvfx.com">jeremy@dccvfx.com</a><br>
-                            <strong>关系：</strong> 学术导师
+                            <strong>Email:</strong> <a href="mailto:jeremy@dccvfx.com">jeremy@dccvfx.com</a><br>
+                            <strong>Relationship:</strong> 学术导师 / Academic Supervisor
                         </p>
                     </div>
-
                 </div>
-                
-                <!-- Privacy Note (Optional) -->
-                <p class="ref-note"><em>* 如需更多详细联系方式，可应要求提供。</em></p>
+                <p class="ref-note"><em>* 如需更多详细推荐信或联系方式，可应要求提供。</em></p>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER / CONTACT -->
     <footer id="contact" class="footer">
-        <h2>联系我</h2>
-        <p>随时接受自由职业外包与工作室全职机会。</p>
+        <h2>联系方式 <span>/ CONTACT</span></h2>
+        <p>目前积极寻求全职岗位 (Full-Time) 及自由职业外包 (Freelance) 合作机会。</p>
         <div class="footer-links">
             <a href="mailto:yutongzhufx@gmail.com">yutongzhufx@gmail.com</a>
             <a href="https://www.linkedin.com/in/yutong-zhu-479a192b2/?skipRedirect=true" target="_blank">LinkedIn</a>
             <a href="https://github.com/DeAstrid" target="_blank">GitHub</a>
         </div>
-        <p class="copyright">&copy; 2026 朱雨桐 (Yutong Zhu). 版权所有。</p>
+        <p class="copyright">&copy; 2026 朱羽童 (Yutong Zhu). All Rights Reserved.</p>
     </footer>
 
+    <!-- LIGHTBOX SCRIPT -->
     <script>
-    document.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = this.getAttribute('href');
-            lightbox.style.display = 'flex';
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightbox-img');
+                lightboxImg.src = this.getAttribute('href');
+                lightbox.style.display = 'flex';
+            });
         });
-    });
 
-    function closeLightbox() {
-        document.getElementById('lightbox').style.display = 'none';
-    }
-</script>
-
-    <script>
-    // Object mapping tabs to YouTube Embed URLs
-    const reels = {
-        'fx': 'https://www.youtube.com/embed/Gct33YVfauw',
-        'general': 'https://www.youtube.com/embed/-ths0ZoY_2M',
-        'comp': 'https://www.youtube.com/embed/VBqzwo5xH4k'
-    };
-
-    function switchReel(type, buttonElement) {
-        // Update Iframe Source
-        const iframe = document.getElementById('main-reel');
-        if (reels[type]) {
-            iframe.src = reels[type];
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
         }
+    </script>
 
-        // Update Active Button Style
-        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-        buttonElement.classList.add('active');
-    }
-</script>
+    <!-- REEL SWITCHER SCRIPT -->
+    <script>
+        const reels = {
+            'fx': 'https://www.youtube.com/embed/Gct33YVfauw',
+            'general': 'https://www.youtube.com/embed/-ths0ZoY_2M',
+            'comp': 'https://www.youtube.com/embed/VBqzwo5xH4k'
+        };
+
+        function switchReel(type, buttonElement) {
+            const iframe = document.getElementById('main-reel');
+            if (reels[type]) {
+                iframe.src = reels[type];
+            }
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            buttonElement.classList.add('active');
+        }
+    </script>
 </body>
 </html>
