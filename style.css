@@ -560,3 +560,67 @@ a {
         font-size: 3.2rem !important;
     }
 }
+
+/* --- CV Dropdown Menu --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 260px;
+    background-color: var(--card-bg, #2d3137);
+    border: 1px solid var(--border-color, #3a3f47);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    z-index: 105;
+    margin-top: 0.4rem;
+    overflow: hidden;
+}
+
+/* Align right side of menu for section headers on desktop */
+.dropdown-menu-right {
+    left: auto;
+    right: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary, #f0f0f0);
+    font-size: 0.88rem;
+    text-align: left;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-bottom: 1px solid var(--border-color, #3a3f47);
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--accent-color, #00adb5);
+    color: #ffffff;
+}
+
+/* Reveal dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mobile Dropdown Adjustments */
+@media (max-width: 768px) {
+    .dropdown-menu-right {
+        left: 0;
+        right: auto;
+    }
+}
