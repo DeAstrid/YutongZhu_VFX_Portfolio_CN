@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>朱羽童 | 特效师作品集</title>
+    <meta name="description" content="朱羽童 Houdini 特效师作品集，专注程序化动力学模拟、物理求解器工作流、环境特效及管线工具开发。">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-brand">朱羽童</div>
         <ul class="nav-links">
-            <li><a href="#reel">作品集</a></li>
+            <li><a href="#showreel">作品集</a></li>
             <li><a href="#projects">项目解析</a></li>
             <li><a href="#cv">个人简历</a></li>
             <li><a href="#contact">联系方式</a></li>
@@ -25,15 +26,18 @@
             <h1>视觉特效作品集</h1>
             <h2>朱羽童</h2>
             <p>特效师 / 技术指导 (TD)，专注于程序化动力学模拟、物理求解器工作流、环境特效及管线工具开发。</p>
-            
+
             <div class="hero-links">
                 <a href="mailto:yutongzhufx@gmail.com" class="btn">发送邮件</a>
-                
-                <!-- 简历下载下拉菜单 -->
-                <div class="dropdown-menu">
-                    <a href="YutongZhu-vfx-simulation-cv.pdf" download="YutongZhu_FX_Simulation_CV.pdf">特效模拟简历（主要）</a>
-                    <a href="yutongzhu-vfx-modeling-and-texturing-cv.pdf" download="YutongZhu_Modeling_CV.pdf">三维建模简历</a>
-                    <a href="yutongzhu-compositing-cv.pdf" download="YutongZhu_Compositing_CV.pdf">后期合成简历</a>
+
+                <!-- 简历下载下拉菜单（与 #cv 区域保持同一结构） -->
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle">下载简历 &#9662;</button>
+                    <div class="dropdown-menu">
+                        <a href="YutongZhu-vfx-simulation-cv.pdf" download="YutongZhu_FX_Simulation_CV.pdf">特效模拟简历（主要）</a>
+                        <a href="yutongzhu-vfx-modeling-and-texturing-cv.pdf" download="YutongZhu_Modeling_CV.pdf">三维建模简历</a>
+                        <a href="yutongzhu-compositing-cv.pdf" download="YutongZhu_Compositing_CV.pdf">后期合成简历</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,7 +45,7 @@
 
     <section id="showreel" class="section">
         <h2 class="section-title">作品集展示</h2>
-        
+
         <!-- 作品集分类标签 -->
         <div class="reel-tabs">
             <button class="tab-btn active" onclick="switchReel('fx', this)">特效与通用作品集（主要）</button>
@@ -49,12 +53,12 @@
             <button class="tab-btn" onclick="switchReel('comp', this)">后期合成与收尾</button>
         </div>
 
-        <!-- 嵌入视频播放框 -->
+        <!-- 嵌入视频播放框（默认与 active 标签一致，指向 B 站） -->
         <div class="reel-container">
-            <iframe id="main-reel" 
-                    src="https://www.youtube.com/embed/Gct33YVfauw" 
-                    title="特效作品集" 
-                    frameborder="0" 
+            <iframe id="main-reel"
+                    src="https://player.bilibili.com/player.html?isOutside=true&amp;aid=117309800710580&amp;bvid=BV1nQhz6fEyx&amp;cid=42089908706&amp;p=1&amp;danmaku=0"
+                    title="特效作品集"
+                    frameborder="0"
                     allowfullscreen>
             </iframe>
         </div>
@@ -63,10 +67,10 @@
     <section id="projects" class="section">
         <h2>项目拆解与解析</h2>
         <div class="project-grid">
-            
+
             <article class="project-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/U-AoObay8bo" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/U-AoObay8bo" title="大脑章鱼生物融合" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="project-info">
                     <h3>大脑章鱼生物融合 (Brain Squid)</h3>
@@ -76,7 +80,7 @@
                     <p>实拍灯光匹配与 CG 灯光匹配</p>
                     <p>程序化动画 (Procedural animation)</p>
                     <p>ZBrush 生物雕刻</p>
-                    <p>软体物理模拟：FEM & Vellum</p>
+                    <p>软体物理模拟：FEM &amp; Vellum</p>
                     <p>流体模拟：FLIP</p>
                     <p>Substance Painter 材质绘制</p>
                     <p>Karma Solaris 材质开发 (Lookdev)</p>
@@ -87,7 +91,7 @@
 
             <article class="project-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/ZztCnPZZFx8" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/ZztCnPZZFx8" title="艺术家程序化触手生成工具" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="project-info">
                     <h3>艺术家程序化触手生成工具</h3>
@@ -100,7 +104,7 @@
 
             <article class="project-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/Y-As2ZvZ5FY" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Y-As2ZvZ5FY" title="3D 泼溅高斯管线测试" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="project-info">
                     <h3>3D 泼溅高斯 (3DGS) 管线测试</h3>
@@ -119,7 +123,7 @@
 
             <article class="project-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/0XTOCtqP6Y4" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/0XTOCtqP6Y4" title="陨石撞击与破碎毁灭" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="project-info">
                     <h3>陨石撞击与破碎毁灭</h3>
@@ -140,7 +144,7 @@
             <div class="tool-card">
                 <h3>自定义 HDA 工具包</h3>
                 <p>用于触手生成与动态动画的 SideFX Houdini 数字资产 (HDA) 集合。</p>
-                <a href="https://github.com/DeAstrid/YutongZhu_VFX_Portfolio" target="_blank" class="text-link">在 GitHub 上查看 &rarr;</a>
+                <a href="https://github.com/DeAstrid/YutongZhu_VFX_Portfolio" target="_blank" rel="noopener" class="text-link">在 GitHub 上查看 &rarr;</a>
             </div>
         </div>
     </section>
@@ -171,7 +175,7 @@
         <span class="lightbox-close">&times;</span>
         <img id="lightbox-img" alt="放大查看作品">
     </div>
-    
+
     <section id="cv" class="section">
         <div class="cv-header">
             <h2>个人简历</h2>
@@ -194,13 +198,13 @@
             <div class="cv-block">
                 <h3>专业技能</h3>
                 <ul class="skills-list">
-                    <li><strong>特效模拟与技术指导 (FX Simulation & TD)</strong>
-                        <p>Houdini, Pyro, Vellum, Flip, RBD, HDA 资产开发, KineFX & Apex 绑定, 程序化动画, Solaris & Karma</p>
+                    <li><strong>特效模拟与技术指导 (FX Simulation &amp; TD)</strong>
+                        <p>Houdini, Pyro, Vellum, Flip, RBD, HDA 资产开发, KineFX &amp; Apex 绑定, 程序化动画, Solaris &amp; Karma</p>
                     </li>
-                    <li><strong>后期合成与整合 (Compositing & Integration)</strong>
+                    <li><strong>后期合成与整合 (Compositing &amp; Integration)</strong>
                         <p>Nuke, CG 元素整合与多通道合成, 技术调色与色彩科学, 抠像与 Rotoscoping</p>
                     </li>
-                    <li><strong>三维建模与材质开发 (3D Modeling & LookDev)</strong>
+                    <li><strong>三维建模与材质开发 (3D Modeling &amp; LookDev)</strong>
                         <p>Maya, ZBrush, Substance Painter, V-Ray, Arnold, 建模与绑定</p>
                     </li>
                     <li><strong>编程与脚本 (Coding)</strong>
@@ -211,7 +215,7 @@
 
             <div class="cv-block">
                 <h3>核心项目经历</h3>
-                
+
                 <div class="cv-item">
                     <h4>特效师 — <em>艺术家程序化触手系统</em></h4>
                     <ul>
@@ -224,7 +228,7 @@
                     <ul>
                         <li>制作了艺术导向且符合物理规律的 3 米半径陨石撞击特效，使用 Pyro 烟火和 POP 粒子模拟实现了特定的叙事节奏与环境交互。</li>
                     </ul>
-                </div>   
+                </div>
 
                 <div class="cv-item">
                     <h4>通用美术师 — <em>‘Brain-Squid’ 生物实拍整合</em></h4>
@@ -259,7 +263,7 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <p class="ref-note"><em>* 如需更多联系方式或推荐信，可应要求提供。</em></p>
             </div>
         </div>
@@ -270,13 +274,14 @@
         <p>随时接受全职岗位、自由职业及工作室项目合作咨询。</p>
         <div class="footer-links">
             <a href="mailto:yutongzhufx@gmail.com">yutongzhufx@gmail.com</a>
-            <a href="https://www.linkedin.com/in/yutong-zhu-479a192b2/?skipRedirect=true" target="_blank">LinkedIn</a>
-            <a href="https://github.com/DeAstrid" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/yutong-zhu-479a192b2/?skipRedirect=true" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/DeAstrid" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <p class="copyright">&copy; 2026 Yutong Zhu (朱雨彤). 保留所有权利。</p>
+        <p class="copyright">&copy; 2026 Yutong Zhu (朱羽童). 保留所有权利。</p>
     </footer>
 
     <script>
+    // 灯箱
     document.querySelectorAll('.gallery-item').forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
@@ -287,13 +292,18 @@
         });
     });
 
+    // 阻止点击放大图片时冒泡到遮罩导致立刻关闭
+    document.getElementById('lightbox-img').addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
     function closeLightbox() {
         document.getElementById('lightbox').style.display = 'none';
     }
     </script>
 
     <script>
-    // 标签切换 YouTube 嵌入链接对象
+    // 标签切换视频嵌入链接
     const reels = {
         'fx': 'https://player.bilibili.com/player.html?isOutside=true&aid=117309800710580&bvid=BV1nQhz6fEyx&cid=42089908706&p=1&danmaku=0',
         'general': 'https://www.youtube.com/embed/-ths0ZoY_2M',
@@ -301,13 +311,11 @@
     };
 
     function switchReel(type, buttonElement) {
-        // 更新 Iframe 链接
         const iframe = document.getElementById('main-reel');
         if (reels[type]) {
             iframe.src = reels[type];
         }
 
-        // 更新按钮选中样式
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         buttonElement.classList.add('active');
     }
