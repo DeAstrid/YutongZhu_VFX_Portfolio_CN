@@ -1,11 +1,11 @@
-/* --- Color Palette & Root Variables --- */
+/* Original Neutral Tone - Optimized for Chinese Typography */
 :root {
-    --bg-color: #22252a;        /* Neutral grey background */
-    --card-bg: #2d3137;        /* Card background */
-    --accent-color: #00adb5;   /* Teal accent */
-    --text-primary: #f0f0f0;   /* Clean white text */
-    --text-secondary: #b0b4bc; /* High-contrast light grey */
-    --border-color: #3a3f47;   /* Subtle borders */
+    --bg-color: #22252a;        /* Lighter neutral grey background */
+    --card-bg: #2d3137;         /* Slightly lighter card background for depth */
+    --accent-color: #00adb5;    /* Original teal accent */
+    --text-primary: #f0f0f0;    /* Clean white text */
+    --text-secondary: #b0b4bc;  /* High-contrast light grey for descriptions */
+    --border-color: #3a3f47;    /* Subtle neutral grey borders */
 }
 
 * {
@@ -14,13 +14,14 @@
     padding: 0;
 }
 
-/* --- Base Chinese Typography --- */
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-    line-height: 1.7; /* Increased for CJK legibility */
+    /* Optimized font stack prioritizing native CJK fonts across Apple, Windows, and Android */
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7; /* Slightly increased line height for CJK character density */
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -28,7 +29,7 @@ a {
     text-decoration: none;
 }
 
-/* --- Navigation Bar --- */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -44,13 +45,8 @@ a {
 
 .nav-brand {
     font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.nav-brand span {
-    font-size: 0.85em;
-    color: var(--text-secondary);
-    font-weight: 400;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px; /* Reduced tracking for Chinese name */
 }
 
 .nav-links {
@@ -61,40 +57,30 @@ a {
 
 .nav-links a {
     color: var(--text-primary);
-    transition: color 0.2s ease;
     font-size: 0.95rem;
+    transition: color 0.2s;
 }
 
 .nav-links a:hover {
     color: var(--accent-color);
 }
 
-/* --- Section Formatting --- */
+/* Section Wrapper */
 .section {
     max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 1.5rem;
 }
 
-.section-title {
+.section h2 {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.5rem;
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
 }
 
-.section-title span {
-    font-size: 0.85rem;
-    color: var(--accent-color);
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-/* --- Hero Section & Header --- */
+/* Hero Section */
 .hero {
     position: relative;
     text-align: center;
@@ -115,7 +101,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.65); 
+    background-color: rgba(0, 0, 0, 0.6); 
     z-index: 1;
 }
 
@@ -126,43 +112,27 @@ a {
     margin: 0 auto;
 }
 
-/* Primary Focus: Portfolio Title */
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 0.25rem;
+    letter-spacing: 1px; /* Optimized letter spacing for Chinese header */
+    margin-bottom: 0.5rem;
     color: #ffffff;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero h1 span {
-    font-size: 0.65em;
-    font-weight: 300;
-    color: var(--text-secondary);
-    letter-spacing: 2px;
-}
-
-/* Secondary Focus: Name & Subtitle */
 .hero h2 {
     color: var(--accent-color);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1.25rem;
 }
 
-.hero h2 span {
-    font-size: 0.9em;
-    color: var(--text-secondary);
-    font-weight: 400;
-    margin-left: 0.25rem;
-}
-
 .hero p {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.05rem;
-    margin-bottom: 2.25rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
 }
 
 .hero-links {
@@ -171,7 +141,7 @@ a {
     gap: 1rem;
 }
 
-/* --- Buttons --- */
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -179,7 +149,8 @@ a {
     color: #fff;
     border-radius: 4px;
     font-weight: 600;
-    transition: opacity 0.2s ease;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
 }
 
 .btn:hover {
@@ -192,7 +163,7 @@ a {
     color: var(--accent-color);
 }
 
-/* --- Video Containers --- */
+/* Responsive Video Embeds */
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
@@ -210,60 +181,7 @@ a {
     height: 100%;
 }
 
-/* --- Showreel & Tabs --- */
-.reel-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    margin: 1.5rem 0 2rem 0;
-    flex-wrap: wrap;
-}
-
-.tab-btn {
-    background-color: var(--card-bg);
-    color: var(--text-secondary);
-    border: 1px solid var(--border-color);
-    padding: 0.6rem 1.25rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    outline: none;
-}
-
-.tab-btn:hover {
-    color: var(--text-primary);
-    border-color: var(--accent-color);
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.tab-btn.active {
-    background-color: var(--accent-color);
-    color: #ffffff;
-    border-color: var(--accent-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.reel-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 3rem auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    background-color: #000;
-}
-
-.reel-container iframe {
-    width: 100% !important;
-    height: 100% !important;
-    display: block;
-}
-
-/* --- Project Breakdowns Grid --- */
+/* Project Breakdowns */
 .project-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -282,28 +200,22 @@ a {
 }
 
 .project-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.project-info p {
+    word-break: break-word; /* Prevents punctuation and long strings overflow */
 }
 
 .tech-stack {
     color: var(--accent-color);
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     margin-bottom: 0.75rem;
 }
 
-.job-role {
-    font-size: 0.92rem;
-    margin-bottom: 0.4rem;
-}
-
-.project-info ul {
-    margin-left: 1.2rem;
-    color: var(--text-secondary);
-    font-size: 0.92rem;
-}
-
-/* --- Tools & Pipeline Section --- */
+/* Tools Section */
 .tools-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -318,21 +230,18 @@ a {
 }
 
 .tool-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
-    font-size: 1.15rem;
 }
 
 .tool-card p {
     color: var(--text-secondary);
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     margin-bottom: 1rem;
 }
 
-.text-link {
-    font-size: 0.9rem;
-}
-
-/* --- CV Formatting --- */
+/* CV Formatting */
 .cv-header {
     display: flex;
     justify-content: space-between;
@@ -355,7 +264,8 @@ a {
 
 .cv-block h3 {
     color: var(--accent-color);
-    font-size: 1.15rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
@@ -364,8 +274,7 @@ a {
 }
 
 .skills-list li {
-    margin-bottom: 0.6rem;
-    font-size: 0.92rem;
+    margin-bottom: 0.75rem;
 }
 
 .cv-item {
@@ -377,16 +286,63 @@ a {
 }
 
 .cv-item h4 {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.cv-date {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
 }
 
 .cv-item ul {
     margin-left: 1.2rem;
     color: var(--text-secondary);
-    font-size: 0.92rem;
 }
 
-/* --- References --- */
+.cv-item li {
+    line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 4rem 1.5rem 2rem;
+    background-color: #090a0d;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .cv-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* References Section */
 .references-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -402,7 +358,8 @@ a {
 }
 
 .reference-card h4 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.2rem;
 }
@@ -410,13 +367,19 @@ a {
 .ref-title {
     color: var(--accent-color);
     font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.ref-company {
+    color: var(--text-secondary);
     font-size: 0.9rem;
+    margin-bottom: 0.75rem;
 }
 
 .ref-contact {
     font-size: 0.85rem;
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .ref-note {
@@ -425,13 +388,13 @@ a {
     color: var(--text-secondary);
 }
 
-/* --- Pinterest-Style Masonry Gallery --- */
+/* Pinterest-style Masonry Gallery */
 .compact-grid {
     column-count: 2;
     column-gap: 0.75rem;
     max-width: 680px;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 @media screen and (min-width: 601px) {
@@ -464,7 +427,7 @@ a {
     opacity: 0.9;
 }
 
-/* --- Enhanced Lightbox --- */
+/* Enhanced Lightbox */
 .lightbox {
     display: none;
     position: fixed;
@@ -510,47 +473,8 @@ a {
 }
 
 .lightbox-close:hover {
-    color: var(--accent-color) !important;
+    color: var(--accent-color, #00adb5) !important;
     transform: scale(1.15);
-}
-
-/* --- Footer --- */
-.footer {
-    text-align: center;
-    padding: 4rem 1.5rem 2rem;
-    background-color: #090a0d;
-    border-top: 1px solid var(--border-color);
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
-}
-
-.copyright {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    .hero h2 {
-        font-size: 1.2rem;
-    }
-    .cv-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -561,7 +485,60 @@ a {
     }
 }
 
-/* --- CV Dropdown Menu --- */
+/* Reel & Tabs Styling */
+.reel-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem 0;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background-color: var(--card-bg, #2d3137);
+    color: var(--text-secondary, #b0b4bc);
+    border: 1px solid var(--border-color, #3a3f47);
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary, #ffffff);
+    border-color: var(--accent-color, #00adb5);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    background-color: var(--accent-color, #00adb5);
+    color: #ffffff;
+    border-color: var(--accent-color, #00adb5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.reel-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color, #3a3f47);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: #000;
+}
+
+.reel-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* CV Dropdown Menu */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -587,7 +564,6 @@ a {
     overflow: hidden;
 }
 
-/* Align right side of menu for section headers on desktop */
 .dropdown-menu-right {
     left: auto;
     right: 0;
@@ -597,7 +573,7 @@ a {
     display: block;
     padding: 0.75rem 1rem;
     color: var(--text-primary, #f0f0f0);
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     text-align: left;
     transition: background-color 0.2s ease, color 0.2s ease;
     border-bottom: 1px solid var(--border-color, #3a3f47);
@@ -612,12 +588,10 @@ a {
     color: #ffffff;
 }
 
-/* Reveal dropdown on hover */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Mobile Dropdown Adjustments */
 @media (max-width: 768px) {
     .dropdown-menu-right {
         left: 0;
