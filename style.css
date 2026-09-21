@@ -598,3 +598,39 @@ a {
         right: auto;
     }
 }
+/* ===== 修复补丁 ===== */
+
+/* 1. 按钮清掉浏览器默认样式 */
+.btn {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* 2. hero 按钮对齐 */
+.hero-links {
+    align-items: center;
+}
+
+/* 3. 导航小屏换行 */
+.nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 4. 下拉菜单触屏可用（配合 JS） */
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+/* 5. 灯箱图片鼠标样式 */
+.lightbox img {
+    cursor: default;
+}
+
+/* 6. iOS 固定背景降级 */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+}
